@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "406031303791",
+    "firebase_url": "https://youfitness-7e7a0.firebaseio.com",
+    "project_id": "youfitness-7e7a0",
+    "storage_bucket": "youfitness-7e7a0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:406031303791:android:e67714776f941b4a",
+        "android_client_info": {
+          "package_name": "com.nanodegree.dnl.youfitness"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "406031303791-2j1polnd0h5ermpm1gn95ul3lqlhaaa4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDo7mabAINAQFkHKChQAsYuv2asNwmFQeY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

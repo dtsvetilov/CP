@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">YouFitness</string>
+    <string name="action_settings">Settings</string>
+    <string name="content_description_image">image_content_description</string>
+    <string name="title_activity_workouts_list">WorkoutsListActivity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+</resources>
