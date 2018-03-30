@@ -6,7 +6,12 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 
+import java.util.HashMap;
+
 public class Database {
+    private static final String NODE_USERS = "users";
+    private static final String NODE_WORKOUTS = "workouts";
+
     private DatabaseReference mDatabaseReference;
 
     public Database() {
@@ -31,7 +36,38 @@ public class Database {
         if (loggedUserId == null)
             return null;
 
-        Query query = mDatabaseReference.child("users").child(loggedUserId).child("workouts");
+        Query query = mDatabaseReference.child(NODE_USERS).child(loggedUserId).child(NODE_WORKOUTS).orderByKey();
         return query;
+    }
+
+    public DatabaseReference getAllWorkoutsInstance() {
+        String loggedUserId = getLoggedUserId();
+        if (loggedUserId == null)
+            return null;
+
+        DatabaseReference recordsReference = mDatabaseReference.child(NODE_USERS).child(loggedUserId).child(NODE_WORKOUTS);
+        return recordsReference;
+    }
+
+    public String createNewWorkout() {
+        String loggedUserId = getLoggedUserId();
+        if (loggedUserId == null)
+            return null;
+
+        String newRecordId = mDatabaseReference.child(NODE_USERS).child(loggedUserId).child(NODE_WORKOUTS).push().getKey();
+
+        Workout record = new Workout("", "", new HashMap<>(), new HashMap<>());
+        mDatabaseReference.child(NODE_USERS).child(loggedUserId).child(NODE_WORKOUTS).child(newRecordId).setValue(record);
+
+        return newRecordId;
+    }
+
+    public DatabaseReference getWorkoutInstance(String recordId) {
+        String loggedUserId = getLoggedUserId();
+        if (loggedUserId == null)
+            return null;
+
+        DatabaseReference recordReference = mDatabaseReference.child(NODE_USERS).child(loggedUserId).child(NODE_WORKOUTS).child(recordId);
+        return recordReference;
     }
 }

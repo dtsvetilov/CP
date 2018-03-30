@@ -3,33 +3,33 @@ package com.nanodegree.dnl.youfitness;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.google.firebase.database.PropertyName;
+
+import org.parceler.Parcel;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @IgnoreExtraProperties
+@Parcel
 public class Workout {
 
-    @PropertyName("name")
     public String name;
 
-    @PropertyName("youtube_video_url")
     public String youTubeVideoUrl;
 
-    @PropertyName("exercises")
     public Map<String, WorkoutExercise> exercises;
 
-    @PropertyName("activities")
     public Map<String, WorkoutActivity> activities;
 
     public Workout() {
 
     }
 
-    public Workout(String name, String youTubeVideoUrl) {
+    public Workout(String name, String youTubeVideoUrl, Map<String, WorkoutExercise> exercises, Map<String, WorkoutActivity> activities) {
         this.name = name;
         this.youTubeVideoUrl = youTubeVideoUrl;
+        this.exercises = exercises;
+        this.activities = activities;
     }
 
 

@@ -22,7 +22,16 @@
         <activity
             android:name=".WorkoutsListActivity"
             android:label="@string/title_activity_workouts_list"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".WorkoutDetailActivity"
+            android:label="@string/title_activity_workout_detail"
+            android:parentActivityName=".WorkoutsListActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.nanodegree.dnl.youfitness.WorkoutsListActivity" />
+        </activity>
     </application>
 
 </manifest>

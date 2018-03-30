@@ -6,4 +6,26 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_workout_detail">WorkoutDetailActivity</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activity_log">Activity Log</string>
+    <string name="info_plan"><![CDATA[Info & Plan]]></string>
+    <string name="delete">Delete</string>
+    <string name="image_content_description">image_content_description</string>
+    <string name="video_not_attached">YouTube video not attached</string>
+    <string name="exercises">Exercises</string>
+    <string name="exercise">Exercise</string>
+    <string name="name">Name</string>
+    <string name="repeats">Repeats</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">Ok</string>
+    <string name="youtube_video">YouTube Video</string>
+    <string name="url">Url</string>
+    <string name="workout_name">Workout Name</string>
 </resources>

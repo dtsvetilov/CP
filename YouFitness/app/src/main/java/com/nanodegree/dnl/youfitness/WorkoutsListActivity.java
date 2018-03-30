@@ -1,5 +1,6 @@
 package com.nanodegree.dnl.youfitness;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -128,7 +129,7 @@ public class WorkoutsListActivity extends BaseActivity {
 
             @Override
             protected void onBindViewHolder(WorkoutViewHolder viewHolder, int position, final Workout model) {
-
+                //viewHolder.bindToData(model);
             }
 
         };
@@ -138,7 +139,15 @@ public class WorkoutsListActivity extends BaseActivity {
 
     @OnClick(R.id.new_workout_fab)
     void onNewWorkoutClick(View view) {
+        String newWorkoutId = getDatabase().createNewWorkout();
+        if (newWorkoutId == null) {
+            //TODO: message if error
+            return;
+        }
 
+        Intent intent = new Intent(this, WorkoutDetailActivity.class);
+        intent.putExtra(WorkoutDetailActivity.ARG_WORKOUT_ID, newWorkoutId);
+        startActivity(intent);
     }
 
     class WorkoutViewHolder extends RecyclerView.ViewHolder {

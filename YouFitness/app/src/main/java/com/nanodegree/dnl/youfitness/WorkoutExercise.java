@@ -2,18 +2,18 @@ package com.nanodegree.dnl.youfitness;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;
-import com.google.firebase.database.PropertyName;
+
+import org.parceler.Parcel;
 
 import java.util.HashMap;
 import java.util.Map;
 
+@Parcel
 @IgnoreExtraProperties
 public class WorkoutExercise {
 
-    @PropertyName("name")
     public String name;
 
-    @PropertyName("repeats")
     public int repeats;
 
     public WorkoutExercise() {
